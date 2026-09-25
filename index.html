@@ -470,155 +470,31 @@
         </div>
 
         <!-- Mobile Menu Button -->
-<!-- ================= MOBILE MENU ================= -->
-<div
-  id="mobileMenu"
-  class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-4 shadow-xl dark:border-[#135443] dark:bg-[#01281E] lg:hidden"
->
-  <!-- Mobile Navigation -->
-  <nav class="flex flex-col gap-1">
-
-    <!-- Home -->
-    <a
-      href="#home"
-      class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 !text-[#00BA74] dark:bg-[#00BA74]/10 dark:!text-emerald-400"
-    >
-      <i class="fa-solid fa-house mr-3 w-5 !text-[#00BA74] dark:!text-emerald-400"></i>
-
-      <span class="!text-[#00BA74] dark:!text-emerald-400">
-        হোম
-      </span>
-    </a>
-
-    <!-- About -->
-    <a
-      href="#about"
-      class="mobile-nav-link flex items-center rounded-xl px-4 py-3 !text-slate-900 transition hover:bg-emerald-50 hover:!text-[#00BA74] dark:!text-white dark:hover:bg-[#00BA74]/10 dark:hover:!text-emerald-400"
-    >
-      <i
-        class="fa-solid fa-circle-info mr-3 w-5 !text-slate-900 dark:!text-white"
-      ></i>
-
-      <span class="!text-slate-900 dark:!text-white">
-        আমাদের সম্পর্কে
-      </span>
-    </a>
-
-    <!-- Features -->
-    <a
-      href="#features"
-      class="mobile-nav-link flex items-center rounded-xl px-4 py-3 !text-slate-900 transition hover:bg-emerald-50 hover:!text-[#00BA74] dark:!text-white dark:hover:bg-[#00BA74]/10 dark:hover:!text-emerald-400"
-    >
-      <i
-        class="fa-solid fa-layer-group mr-3 w-5 !text-slate-900 dark:!text-white"
-      ></i>
-
-      <span class="!text-slate-900 dark:!text-white">
-        বৈশিষ্ট্য
-      </span>
-    </a>
-
-    <!-- Solutions -->
-    <a
-      href="#solutions"
-      class="mobile-nav-link flex items-center rounded-xl px-4 py-3 !text-slate-900 transition hover:bg-emerald-50 hover:!text-[#00BA74] dark:!text-white dark:hover:bg-[#00BA74]/10 dark:hover:!text-emerald-400"
-    >
-      <i
-        class="fa-solid fa-lightbulb mr-3 w-5 !text-slate-900 dark:!text-white"
-      ></i>
-
-      <span class="!text-slate-900 dark:!text-white">
-        সমাধান
-      </span>
-    </a>
-
-    <!-- Reviews -->
-    <a
-      href="#reviews"
-      class="mobile-nav-link flex items-center rounded-xl px-4 py-3 !text-slate-900 transition hover:bg-emerald-50 hover:!text-[#00BA74] dark:!text-white dark:hover:bg-[#00BA74]/10 dark:hover:!text-emerald-400"
-    >
-      <i
-        class="fa-solid fa-star mr-3 w-5 !text-slate-900 dark:!text-white"
-      ></i>
-
-      <span class="!text-slate-900 dark:!text-white">
-        রিভিউ
-      </span>
-    </a>
-
-    <!-- FAQ -->
-    <a
-      href="#faq"
-      class="mobile-nav-link flex items-center rounded-xl px-4 py-3 !text-slate-900 transition hover:bg-emerald-50 hover:!text-[#00BA74] dark:!text-white dark:hover:bg-[#00BA74]/10 dark:hover:!text-emerald-400"
-    >
-      <i
-        class="fa-solid fa-circle-question mr-3 w-5 !text-slate-900 dark:!text-white"
-      ></i>
-
-      <span class="!text-slate-900 dark:!text-white">
-        প্রশ্নোত্তর
-      </span>
-    </a>
-
-  </nav>
-
-  <!-- Mobile Controls -->
-  <div
-    class="mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 dark:border-[#135443]"
-  >
-    <div class="flex items-center justify-between">
-
-      <!-- Language -->
-      <div
-        class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
-      >
         <button
-          class="rounded-full bg-[#00BA74] px-4 py-1.5 !text-white"
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-100 text-xl text-slate-800 transition-all hover:scale-105 hover:border-[#00BA74] hover:text-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-white lg:hidden"
         >
-          বাংলা
+          <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
         </button>
-
-        <button
-          class="px-4 py-1.5 !text-slate-700 transition hover:!text-[#00BA74] dark:!text-gray-300"
-        >
-          EN
-        </button>
-      </div>
-
-      <!-- Theme -->
-      <button
-        id="mobileThemeToggle"
-        type="button"
-        aria-label="Toggle theme"
-        class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 !text-slate-700 transition hover:scale-110 dark:border-[#135443] dark:bg-[#034333] dark:!text-amber-400"
-      >
-        <i id="mobileThemeIcon" class="fa-solid fa-moon"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Demo -->
-    <a
-      href="#demo"
-      class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-5 py-3 text-sm font-bold !text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:scale-[1.02]"
-    >
-      <i class="fa-solid fa-eye !text-white"></i>
-
-      <span class="!text-white">
-        ডেমো দেখুন
-      </span>
-    </a>
-  </div>
-</div>
-
       </div>
 
       <!-- ================= MOBILE MENU ================= -->
       <div
         id="mobileMenu"
-        class="hidden border-t border-slate-200 bg-white/95 px-4 pb-5 pt-4 text-slate-900 shadow-xl backdrop-blur-md dark:border-[#135443] dark:bg-[#01281E]/98 dark:text-white lg:hidden"
+        class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-4 shadow-xl dark:border-[#135443] dark:bg-[#01281E] lg:hidden"
       >
         <!-- Mobile Navigation -->
-        <nav class="flex flex-col gap-1 text-slate-900 dark:text-white">
+        <nav
+          class="flex flex-col gap-1 font-sans"
+          style="
+            font-family:
+              &quot;Noto Sans Bengali&quot;, &quot;Hind Siliguri&quot;,
+              sans-serif;
+          "
+        >
           <a
             href="#home"
             class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10 dark:text-emerald-400"
@@ -629,7 +505,7 @@
 
           <a
             href="#about"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-circle-info mr-3 w-5"></i>
             <span>আমাদের সম্পর্কে</span>
@@ -637,7 +513,7 @@
 
           <a
             href="#features"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-layer-group mr-3 w-5"></i>
             <span>বৈশিষ্ট্য</span>
@@ -645,7 +521,7 @@
 
           <a
             href="#solutions"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-lightbulb mr-3 w-5"></i>
             <span>সমাধান</span>
@@ -653,7 +529,7 @@
 
           <a
             href="#reviews"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-star mr-3 w-5"></i>
             <span>রিভিউ</span>
@@ -661,7 +537,7 @@
 
           <a
             href="#faq"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-circle-question mr-3 w-5"></i>
             <span>প্রশ্নোত্তর</span>
@@ -705,7 +581,7 @@
             class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:scale-[1.02]"
           >
             <i class="fa-solid fa-eye"></i>
-            ডেমো দেখুন
+            <span>ডেমো দেখুন</span>
           </a>
         </div>
       </div>
