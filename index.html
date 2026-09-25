@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduManage - Smart Education System</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Font (Hind Siliguri for Bengali) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: "#00BA74",
+                darkGreen: "#01281E",
+                emerald: "#059669",
+                lightBg: "#F8FAFC",
+                cardLight: "#FFFFFF",
+              },
+            },
+            fontFamily: {
+              sans: ["Hind Siliguri", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Keyframe Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1deg); }
+      }
+      @keyframes float-reverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(12px) rotate(-1deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.08); }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+
+      .animate-float {
+        animation: float 5s ease-in-out infinite;
+      }
+      .animate-float-reverse {
+        animation: float-reverse 6s ease-in-out infinite;
+      }
+      .animate-glow {
+        animation: pulseGlow 4s ease-in-out infinite;
+      }
+      .shimmer-btn {
+        background: linear-gradient(90deg, #00BA74 0%, #10B981 50%, #00BA74 100%);
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 dark:bg-[#01281E] text-slate-800 dark:text-white font-sans antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-[#01281E]/90 backdrop-blur-md border-b border-slate-200 dark:border-[#135443] transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00BA74] to-emerald-400 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-[#00BA74]/30 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <span class="text-xl font-extrabold text-slate-900 dark:text-white tracking-wide block leading-tight">EduManage</span>
+            <span class="text-[10px] text-[#00BA74] dark:text-emerald-400 tracking-wider uppercase font-semibold block">Smart Education System</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-gray-200">
+          <a href="#home" class="text-[#00BA74] hover:text-[#00BA74] transition-colors">হোম</a>
+          <a href="#features" class="hover:text-[#00BA74] transition-colors">বৈশিষ্ট্য</a>
+          <a href="#solutions" class="hover:text-[#00BA74] transition-colors">সমাধান</a>
+          <a href="#stats" class="hover:text-[#00BA74] transition-colors">সাফল্য</a>
+          <a href="#faq" class="hover:text-[#00BA74] transition-colors">প্রশ্নোত্তর</a>
+        </nav>
+
+        <!-- Right Actions (Language, Theme, CTA) -->
+        <div class="hidden sm:flex items-center gap-4">
+          <!-- Language Switcher -->
+          <div class="flex items-center bg-slate-100 dark:bg-[#034333] p-1 rounded-full text-xs font-semibold border border-slate-200 dark:border-[#135443]">
+            <button class="px-3 py-1 bg-[#00BA74] text-white rounded-full shadow-sm">বাংলা</button>
+            <button class="px-3 py-1 text-slate-600 dark:text-gray-300 hover:text-[#00BA74] transition">EN</button>
+          </div>
+
+          <!-- Theme Switcher Toggle Button -->
+          <button id="themeToggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-[#034333] border border-slate-200 dark:border-[#135443] flex items-center justify-center text-slate-700 dark:text-amber-400 hover:scale-110 transition-all shadow-sm">
+            <i id="themeIcon" class="fa-solid fa-sun text-lg"></i>
+          </button>
+
+          <!-- CTA Button -->
+          <a href="#demo" class="shimmer-btn text-white font-semibold text-sm px-6 py-2.5 rounded-full flex items-center gap-2 shadow-lg shadow-[#00BA74]/30 hover:scale-105 transition-all">
+            <span>ডেমো দেখুন</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-slate-800 dark:text-white text-2xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative pt-12 pb-24 lg:pt-20 lg:pb-36 overflow-hidden bg-gradient-to-b from-emerald-50/60 via-slate-50 to-white dark:from-[#01281E] dark:via-[#013528] dark:to-[#01281E]">
+      
+      <!-- Glowing Animated Background Blobs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-[#00BA74]/20 rounded-full blur-[120px] pointer-events-none animate-glow"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-[#034333]/80 border border-emerald-300 dark:border-[#00BA74]/30 text-[#00BA74] dark:text-emerald-300 text-xs sm:text-sm font-semibold shadow-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#00BA74] animate-ping"></span>
+              <span>স্কুল | মাদ্রাসা | কলেজ</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-slate-900 dark:text-white tracking-wide">
+              আপনার শিক্ষা প্রতিষ্ঠান পরিচালনা হোক আরও <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00BA74] via-emerald-500 to-teal-600">
+                সহজ ও স্মার্ট!
+              </span>
+            </h1>
+
+            <p class="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              স্কুল, মাদ্রাসা ও কলেজের দৈনন্দিন সকল প্রশাসনিক কার্যক্রম এখন একটি মাত্র প্ল্যাটফর্মে — সম্পূর্ণ ডিজিটাল ও পেপারলেস সমাধান।
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#features" class="shimmer-btn text-white font-bold text-sm sm:text-base px-8 py-4 rounded-full flex items-center gap-3 shadow-xl shadow-[#00BA74]/30 transition-all transform hover:-translate-y-1">
+                <span>সফটওয়্যারটি দেখুন</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+
+              <a href="#demo" class="bg-white dark:bg-transparent hover:bg-slate-100 dark:hover:bg-[#034333] text-slate-800 dark:text-white font-semibold text-sm sm:text-base px-8 py-4 rounded-full border border-slate-300 dark:border-emerald-500/40 shadow-sm transition-all">
+                ডেমো রিকোয়েস্ট করুন
+              </a>
+            </div>
+
+            <div class="pt-4 flex flex-wrap justify-center lg:justify-start items-center gap-6 text-xs sm:text-sm text-slate-700 dark:text-emerald-200 font-semibold">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#00BA74]"></i><span>সহজ ব্যবহার</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#00BA74]"></i><span>নিরাপদ ডাটা</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-[#00BA74]"></i><span>২৪/৭ সাপোর্ট</span></div>
+            </div>
+          </div>
+
+          <!-- Right Mockups with Floating Motion -->
+          <div class="lg:col-span-6 relative flex justify-center items-center">
+            <div class="relative w-full max-w-lg lg:max-w-none animate-float">
+              
+              <!-- Main Laptop Mockup -->
+              <div class="relative bg-slate-900 border-[6px] border-slate-800 rounded-t-2xl shadow-2xl overflow-hidden aspect-[16/10]">
+                <div class="bg-slate-800 px-3 py-1.5 flex items-center gap-1.5 border-b border-slate-700">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <div class="mx-auto text-[10px] text-slate-400 bg-slate-900 px-3 py-0.5 rounded-md font-mono">
+                    edumanage.app/dashboard
+                  </div>
+                </div>
+
+                <!-- Screen Inner Content -->
+                <div class="p-3 bg-slate-950 h-full text-xs">
+                  <div class="grid grid-cols-4 gap-2 mb-3">
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-lg text-white">
+                      <p class="text-[8px] text-gray-400">Total Students</p>
+                      <p class="text-xs font-bold text-[#00BA74]">1,250</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-lg text-white">
+                      <p class="text-[8px] text-gray-400">Teachers</p>
+                      <p class="text-xs font-bold text-emerald-400">85</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-lg text-white">
+                      <p class="text-[8px] text-gray-400">Fees Collected</p>
+                      <p class="text-xs font-bold text-teal-400">৳ 4.2L</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-lg text-white">
+                      <p class="text-[8px] text-gray-400">Classes</p>
+                      <p class="text-xs font-bold text-emerald-300">42</p>
+                    </div>
+                  </div>
+
+                  <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-center mb-1">
+                      <span class="font-bold text-[10px] text-gray-200">Attendance Graph</span>
+                      <span class="text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full">Today 98%</span>
+                    </div>
+                    <svg class="w-full h-14" viewBox="0 0 300 60">
+                      <path d="M0 45 C50 20, 100 50, 150 15 C200 35, 250 10, 300 25" stroke="#00BA74" stroke-width="3" fill="none"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Laptop Base -->
+              <div class="bg-slate-800 h-3 rounded-b-xl max-w-[105%] -ml-[2.5%] shadow-2xl relative flex justify-center">
+                <div class="w-16 h-1 bg-slate-600 rounded-b-sm"></div>
+              </div>
+
+              <!-- Overlapping Mobile Card Floating Reverse -->
+              <div class="absolute -bottom-6 -left-6 w-32 sm:w-40 bg-slate-900 border-4 border-slate-800 rounded-2xl shadow-2xl p-2 animate-float-reverse z-20">
+                <div class="bg-slate-950 rounded-xl p-2 text-white text-[9px] space-y-2">
+                  <div class="w-8 h-1 bg-slate-700 rounded-full mx-auto"></div>
+                  <div class="bg-[#00BA74] p-2 rounded-lg text-center font-bold">
+                    1,250
+                    <span class="block text-[7px] font-normal opacity-90">Active Students</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Cap Badge -->
+              <div class="absolute -top-6 -right-4 w-12 h-12 bg-[#00BA74] rounded-2xl flex items-center justify-center text-white text-xl shadow-xl shadow-[#00BA74]/40 animate-float-reverse">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INSTITUTION TYPES ==================== -->
+    <section id="solutions" class="relative py-20 bg-white dark:bg-[#01281E] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 dark:bg-[#034333] border border-emerald-300 dark:border-[#00BA74]/30 text-[#00BA74] dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-regular fa-compass"></i>
+            <span>ইনস্টিটিউট সিলেক্ট করুন</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white">
+            সকল প্রতিষ্ঠানের জন্য বিশেষায়িত সমাধান
+          </h2>
+          <p class="text-slate-600 dark:text-gray-300 text-sm sm:text-base font-normal">
+            আপনার প্রতিষ্ঠানের ক্যাটাগরি যাই হোক না কেন, EduManage ঠিক সেভাবেই তৈরি।
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- School Card -->
+          <div class="group bg-slate-50 dark:bg-[#033B2D]/70 p-8 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00BA74]/15 flex flex-col justify-between">
+            <div class="space-y-6">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-[#034333] border border-[#00BA74]/40 flex items-center justify-center text-[#00BA74] text-3xl group-hover:scale-110 group-hover:bg-[#00BA74] group-hover:text-white transition-all shadow-md">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#00BA74] transition-colors">স্কুল</h3>
+                <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">শিক্ষার্থী, উপস্থিতি, ডিজিটাল এক্সাম রিপোর্ট ও ফি কালেকশন সহজীকরণ।</p>
+              </div>
+            </div>
+            <div class="pt-8">
+              <a href="#" class="w-full py-3 px-4 rounded-xl bg-[#00BA74] hover:bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+                <span>বিস্তারিত দেখুন</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Madrasa Card -->
+          <div class="group relative bg-slate-50 dark:bg-[#033B2D]/70 p-8 rounded-3xl border-2 border-[#00BA74] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00BA74]/25 flex flex-col justify-between">
+            <div class="absolute -top-3.5 right-6 bg-[#00BA74] text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+              বিশেষ ফিচার
+            </div>
+            <div class="space-y-6">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-[#034333] border border-[#00BA74]/40 flex items-center justify-center text-[#00BA74] text-3xl group-hover:scale-110 group-hover:bg-[#00BA74] group-hover:text-white transition-all shadow-md">
+                <i class="fa-solid fa-mosque"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#00BA74] transition-colors">মাদ্রাসা</h3>
+                <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">কুরআন, হাদিস, হিফজ হিসাব ও আরবি ফরম্যাটে রেজাল্ট কার্ড তৈরির সুব্যবস্থা।</p>
+              </div>
+            </div>
+            <div class="pt-8">
+              <a href="#" class="w-full py-3 px-4 rounded-xl bg-[#00BA74] hover:bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+                <span>বিস্তারিত দেখুন</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- College Card -->
+          <div class="group bg-slate-50 dark:bg-[#033B2D]/70 p-8 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00BA74]/15 flex flex-col justify-between">
+            <div class="space-y-6">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-[#034333] border border-[#00BA74]/40 flex items-center justify-center text-[#00BA74] text-3xl group-hover:scale-110 group-hover:bg-[#00BA74] group-hover:text-white transition-all shadow-md">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#00BA74] transition-colors">কলেজ</h3>
+                <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">বিভাগ, সেমিস্টার, বিষয়ভিত্তিক রেজাল্ট, টিচার্স পে-রোল ও এডমিন রুটিন।</p>
+              </div>
+            </div>
+            <div class="pt-8">
+              <a href="#" class="w-full py-3 px-4 rounded-xl bg-[#00BA74] hover:bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+                <span>বিস্তারিত দেখুন</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES GRID ==================== -->
+    <section id="features" class="relative py-20 bg-slate-100/70 dark:bg-[#01281E] border-t border-slate-200 dark:border-[#135443]/50 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="mb-14 text-center lg:text-left space-y-2">
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+            সব প্রয়োজন এক প্ল্যাটফর্মে
+          </h2>
+          <p class="text-slate-600 dark:text-emerald-200/80 text-sm sm:text-base">
+            নিচে দেওয়া ১০টি বিশেষ সুবিধা আপনার ম্যানেজমেন্টকে করবে ঝামেলাহীন।
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- 10 Feature Cards Grid -->
+          <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            
+            <!-- Item 1 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Student</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Teacher</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Attendance</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-file-pen"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Exam & Result</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Fee & Accounts</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Class & Subject</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Notice</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-bus"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Transport</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Library</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">Management</p>
+              </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="group bg-white dark:bg-[#033B2D]/90 p-4 rounded-2xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 hover:shadow-xl shadow-sm flex flex-col justify-between cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-[#00BA74]/20 flex items-center justify-center text-[#00BA74] group-hover:bg-[#00BA74] group-hover:text-white transition-all mb-4">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-800 dark:text-white group-hover:text-[#00BA74]">Reports</h4>
+                <p class="text-[10px] text-slate-500 dark:text-gray-300">& Analytics</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Spotlight Card -->
+          <div class="lg:col-span-4 relative rounded-3xl overflow-hidden shadow-2xl border border-[#00BA74]/40 group flex flex-col justify-end min-h-[320px]">
+            <img src="https://c8.alamy.com/comp/2RHTAKJ/a-group-of-students-on-the-roof-top-of-a-madrasha-islamic-school-in-old-dhaka-bangladesh-2RHTAKJ.jpg" alt="Students" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <div class="relative z-10 p-6 space-y-2 text-white">
+              <span class="bg-[#00BA74] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block">স্পেশাল মডিউল</span>
+              <h3 class="text-lg font-bold">আধুনিক প্রযুক্তি ও ইসলামিক এডুকেশন</h3>
+              <p class="text-xs text-slate-300 font-light leading-relaxed">সহজে রেজাল্ট তৈরি, ফি ট্র্যাকিং ও দ্রুত এসএমএস অ্যালার্ট নোটিফিকেশন।</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS & REVIEWS ==================== -->
+    <section id="stats" class="relative py-20 bg-white dark:bg-[#01281E] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Stats Grid -->
+          <div class="lg:col-span-7 grid grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-gradient-to-br dark:from-[#033B2D] dark:to-[#01281E] p-6 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 shadow-sm">
+              <div class="text-[#00BA74] text-3xl font-black mb-1">1,200+</div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-emerald-100">এক্টিভ শিক্ষার্থী</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-gradient-to-br dark:from-[#033B2D] dark:to-[#01281E] p-6 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 shadow-sm">
+              <div class="text-[#00BA74] text-3xl font-black mb-1">85+</div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-emerald-100">দক্ষ শিক্ষক ও কর্মী</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-gradient-to-br dark:from-[#033B2D] dark:to-[#01281E] p-6 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 shadow-sm">
+              <div class="text-[#00BA74] text-3xl font-black mb-1">50+</div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-emerald-100">ট্রাস্টেড প্রতিষ্ঠান</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-gradient-to-br dark:from-[#033B2D] dark:to-[#01281E] p-6 rounded-3xl border border-slate-200 dark:border-[#135443] hover:border-[#00BA74] transition-all hover:-translate-y-1 shadow-sm">
+              <div class="text-[#00BA74] text-3xl font-black mb-1">99%</div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-emerald-100">সন্তুষ্ট গ্রাহক</p>
+            </div>
+          </div>
+
+          <!-- Testimonial Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="bg-emerald-900 text-white p-8 rounded-3xl shadow-2xl border border-[#00BA74]/40 space-y-6">
+              <i class="fa-solid fa-quote-left text-3xl text-[#00BA74]"></i>
+              <p class="text-sm sm:text-base italic leading-relaxed font-light">
+                "EduManage আমাদের ইনস্টিটিউশনের কাজকে করেছে অত্যন্ত সহজ, দ্রুত এবং কার্যক্ষম। আমাদের পেপারওয়ার্ক প্রায় শূন্যের কোঠায় নেমে এসেছে।"
+              </p>
+              <div class="flex items-center gap-4 pt-2">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Principal" class="w-12 h-12 rounded-full object-cover border-2 border-[#00BA74]">
+                <div>
+                  <h4 class="text-sm font-bold">মো: রফিকুল ইসলাম</h4>
+                  <p class="text-xs text-emerald-300">প্রধান শিক্ষক, আল-নুর উচ্চ বিদ্যালয়</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION ==================== -->
+    <section id="faq" class="relative py-20 bg-slate-50 dark:bg-[#01281E] border-t border-slate-200 dark:border-[#135443]/40 transition-colors">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center mb-12 space-y-2">
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">সাধারণ প্রশ্ন ও উত্তর (FAQ)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-emerald-200/70">আপনার মনে থাকা প্রশ্নগুলোর তাত্ক্ষণিক সমাধান</p>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-white dark:bg-[#033B2D]/80 rounded-2xl border border-slate-200 dark:border-[#135443] p-5 cursor-pointer shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-slate-800 dark:text-white">
+              <span>১. সফটওয়্যারটি ব্যবহার করতে কি প্রশিক্ষণের প্রয়োজন আছে?</span>
+              <span class="text-[#00BA74] group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-[#135443] pt-3">
+              না, এটি অত্যন্ত সহজ। আমাদের টিম সম্পূর্ণ বিনামূল্যে ফ্রি ট্রেনিং গাইড প্রদান করে থাকে।
+            </p>
+          </details>
+
+          <details class="group bg-white dark:bg-[#033B2D]/80 rounded-2xl border border-slate-200 dark:border-[#135443] p-5 cursor-pointer shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-sm sm:text-base text-slate-800 dark:text-white">
+              <span>২. আমাদের আগের ডাটা কীভাবে মাইগ্রেট করব?</span>
+              <span class="text-[#00BA74] group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-[#135443] pt-3">
+              Excel ফাইল দিয়ে এক ক্লিকেই খুব সহজে পূর্বের সকল তথ্য সফটওয়্যারে আপলোড করা যাবে।
+            </p>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section id="demo" class="relative py-16 bg-white dark:bg-[#01281E] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative bg-gradient-to-r from-emerald-600 via-[#00BA74] to-teal-700 rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-white">
+          <div class="space-y-2 text-center md:text-left">
+            <h2 class="text-2xl sm:text-3xl font-black">আপনার প্রতিষ্ঠানকে আজই আরও স্মার্ট করুন!</h2>
+            <p class="text-emerald-100 text-xs sm:text-sm font-light">EduManage অভিজ্ঞতা অর্জন করতে এখনই ফ্রিতে ডেমো ট্রায়াল বুক করুন।</p>
+          </div>
+          <a href="#" class="bg-white text-[#00BA74] hover:bg-slate-100 font-bold text-sm sm:text-base px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105">
+            ডেমো বুকিং দিন
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 text-xs sm:text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <a href="#" class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-[#00BA74] flex items-center justify-center text-white font-bold">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <span class="text-lg font-bold text-white">EduManage</span>
+            </a>
+            <p class="text-xs text-slate-400">বাংলাদেশের সকল শিক্ষা প্রতিষ্ঠানের বিশ্বস্ত ও সম্পূর্ণ ডিজিটাল স্মার্ট সলিউশন।</p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-3">নেভিগেশন</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-[#00BA74]">হোম</a></li>
+              <li><a href="#features" class="hover:text-[#00BA74]">ফিচারসমূহ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-3">সহযোগিতা</h4>
+            <ul class="space-y-2">
+              <li><a href="#faq" class="hover:text-[#00BA74]">হেল্প সেন্টার</a></li>
+              <li><a href="#" class="hover:text-[#00BA74]">প্রাইভেসি পলিসি</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-3">যোগাযোগ</h4>
+            <p class="text-xs">ধানমন্ডি, ঢাকা, বাংলাদেশ<br>info@edumanage.com</p>
+          </div>
+        </div>
+        <div class="border-t border-slate-800 pt-6 text-center text-[11px] text-slate-500">
+          © 2026 EduManage. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Theme Switcher JavaScript Logic -->
+    <script>
+      const themeToggleBtn = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const htmlElement = document.documentElement;
+
+      themeToggleBtn.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+          htmlElement.classList.remove('dark');
+          htmlElement.classList.add('light');
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+          themeIcon.classList.remove('text-amber-400');
+          themeIcon.classList.add('text-slate-700');
+        } else {
+          htmlElement.classList.remove('light');
+          htmlElement.classList.add('dark');
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+          themeIcon.classList.remove('text-slate-700');
+          themeIcon.classList.add('text-amber-400');
+        }
+      });
+    </script>
+  </body>
+</html>
