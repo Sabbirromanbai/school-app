@@ -369,6 +369,7 @@
     class="bg-slate-50 dark:bg-[#01281E] text-slate-800 dark:text-white font-sans antialiased overflow-x-hidden transition-colors duration-300"
   >
     <!-- HEADER / NAVBAR -->
+    ```html
     <header
       class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md transition-all dark:border-[#135443] dark:bg-[#01281E]/95"
     >
@@ -484,55 +485,56 @@
       <!-- ================= MOBILE MENU ================= -->
       <div
         id="mobileMenu"
-        class="hidden border-t border-slate-200 bg-white/95 px-4 pb-5 pt-4 shadow-xl backdrop-blur-md dark:border-[#135443] dark:bg-[#01281E]/98 lg:hidden"
+        class="hidden border-t border-slate-200 bg-white/95 px-4 pb-5 pt-4 text-slate-900 shadow-xl backdrop-blur-md dark:border-[#135443] dark:bg-[#01281E]/98 dark:text-white lg:hidden"
       >
-        <nav class="flex flex-col gap-1">
+        <!-- Mobile Navigation -->
+        <nav class="flex flex-col gap-1 text-slate-900 dark:text-white">
           <a
             href="#home"
-            class="mobile-nav-link rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10 dark:text-emerald-400"
           >
             <i class="fa-solid fa-house mr-3 w-5"></i>
-            হোম
+            <span>হোম</span>
           </a>
 
           <a
             href="#about"
-            class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-gray-200 dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-circle-info mr-3 w-5"></i>
-            আমাদের সম্পর্কে
+            <span>আমাদের সম্পর্কে</span>
           </a>
 
           <a
             href="#features"
-            class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-gray-200 dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-layer-group mr-3 w-5"></i>
-            বৈশিষ্ট্য
+            <span>বৈশিষ্ট্য</span>
           </a>
 
           <a
             href="#solutions"
-            class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-gray-200 dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-lightbulb mr-3 w-5"></i>
-            সমাধান
+            <span>সমাধান</span>
           </a>
 
           <a
             href="#reviews"
-            class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-gray-200 dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-star mr-3 w-5"></i>
-            রিভিউ
+            <span>রিভিউ</span>
           </a>
 
           <a
             href="#faq"
-            class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-gray-200 dark:hover:bg-[#00BA74]/10"
+            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
           >
             <i class="fa-solid fa-circle-question mr-3 w-5"></i>
-            প্রশ্নোত্তর
+            <span>প্রশ্নোত্তর</span>
           </a>
         </nav>
 
@@ -550,7 +552,7 @@
               </button>
 
               <button
-                class="px-4 py-1.5 text-slate-600 transition hover:text-[#00BA74] dark:text-gray-300"
+                class="px-4 py-1.5 text-slate-700 transition hover:text-[#00BA74] dark:text-gray-300"
               >
                 EN
               </button>
@@ -578,7 +580,6 @@
         </div>
       </div>
     </header>
-
     <!-- HERO SECTION -->
     <section
       id="home"
