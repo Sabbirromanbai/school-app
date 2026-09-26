@@ -469,383 +469,486 @@
     class="bg-slate-50 dark:bg-[#01281E] text-slate-800 dark:text-white font-sans antialiased overflow-x-hidden transition-colors duration-300"
   >
     <!-- HEADER / NAVBAR -->
-    <header
-      class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md transition-all dark:border-[#135443] dark:bg-[#01281E]/95"
-    >
+   <header
+  class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md transition-all dark:border-[#135443] dark:bg-[#01281E]/95"
+>
+  <div
+    class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+  >
+    <!-- ================= LOGO ================= -->
+    <a href="#home" class="group flex shrink-0 items-center gap-3">
       <div
-        class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#00BA74] to-emerald-400 text-xl font-bold text-white shadow-lg shadow-[#00BA74]/30 transition-transform group-hover:scale-110"
       >
-        <!-- ================= LOGO ================= -->
-        <a href="#home" class="group flex shrink-0 items-center gap-3">
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#00BA74] to-emerald-400 text-xl font-bold text-white shadow-lg shadow-[#00BA74]/30 transition-transform group-hover:scale-110"
-          >
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
 
-          <div>
-            <span
-              class="block text-xl font-extrabold leading-tight tracking-wide text-slate-900 dark:text-white"
-            >
-              EDURLAB
-            </span>
-
-            <span
-              class="block text-[9px] font-semibold uppercase tracking-wider text-[#00BA74] dark:text-emerald-400 sm:text-[10px]"
-            >
-              Smart Education System
-            </span>
-          </div>
-        </a>
-
-        <!-- ================= DESKTOP NAVIGATION ================= -->
-        <nav
-          class="hidden items-center gap-6 text-sm font-semibold text-slate-600 dark:text-gray-200 xl:flex"
+      <div>
+        <span
+          class="block text-xl font-extrabold leading-tight tracking-wide text-slate-900 dark:text-white"
         >
-          <a
-            href="#home"
-            class="text-[#00BA74] transition-colors hover:text-[#00BA74]"
+          EDURLAB
+        </span>
+
+        <span
+          class="block text-[9px] font-semibold uppercase tracking-wider text-[#00BA74] dark:text-emerald-400 sm:text-[10px]"
+        >
+          Smart Education System
+        </span>
+      </div>
+    </a>
+
+    <!-- ================= DESKTOP NAVIGATION ================= -->
+    <nav
+      class="hidden items-center gap-6 text-sm font-semibold text-slate-600 dark:text-gray-200 xl:flex"
+    >
+      <!-- Home -->
+      <a
+        href="#home"
+        data-bn="হোম"
+        data-en="Home"
+        class="text-[#00BA74] transition-colors hover:text-[#00BA74]"
+      >
+        হোম
+      </a>
+
+      <!-- About -->
+      <a
+        href="#about"
+        data-bn="আমাদের সম্পর্কে"
+        data-en="About Us"
+        class="transition-colors hover:text-[#00BA74]"
+      >
+        আমাদের সম্পর্কে
+      </a>
+
+      <!-- Features -->
+      <a
+        href="#features"
+        data-bn="বৈশিষ্ট্য"
+        data-en="Features"
+        class="transition-colors hover:text-[#00BA74]"
+      >
+        বৈশিষ্ট্য
+      </a>
+
+      <!-- Solutions -->
+      <a
+        href="#solutions"
+        data-bn="সমাধান"
+        data-en="Solutions"
+        class="transition-colors hover:text-[#00BA74]"
+      >
+        সমাধান
+      </a>
+
+      <!-- Reviews -->
+      <a
+        href="#reviews"
+        data-bn="রিভিউ"
+        data-en="Reviews"
+        class="transition-colors hover:text-[#00BA74]"
+      >
+        রিভিউ
+      </a>
+
+      <!-- FAQ -->
+      <a
+        href="#faq"
+        data-bn="প্রশ্নোত্তর"
+        data-en="FAQ"
+        class="transition-colors hover:text-[#00BA74]"
+      >
+        প্রশ্নোত্তর
+      </a>
+
+      <!-- ================= APP DOWNLOAD DROPDOWN ================= -->
+      <div class="group relative">
+        <button
+          type="button"
+          class="flex items-center gap-2 py-7 transition-colors hover:text-[#00BA74]"
+        >
+          <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+
+          <span
+            data-bn="অ্যাপ ডাউনলোড"
+            data-en="Download App"
           >
-            হোম
-          </a>
+            অ্যাপ ডাউনলোড
+          </span>
 
-          <a href="#about" class="transition-colors hover:text-[#00BA74]">
-            আমাদের সম্পর্কে
-          </a>
+          <i
+            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"
+          ></i>
+        </button>
 
-          <a href="#features" class="transition-colors hover:text-[#00BA74]">
-            বৈশিষ্ট্য
-          </a>
-
-          <a href="#solutions" class="transition-colors hover:text-[#00BA74]">
-            সমাধান
-          </a>
-
-          <a href="#reviews" class="transition-colors hover:text-[#00BA74]">
-            রিভিউ
-          </a>
-
-          <a href="#faq" class="transition-colors hover:text-[#00BA74]">
-            প্রশ্নোত্তর
-          </a>
-
-          <!-- ================= APP DOWNLOAD DROPDOWN ================= -->
-          <div class="group relative">
-            <button
-              type="button"
-              class="flex items-center gap-2 py-7 transition-colors hover:text-[#00BA74]"
+        <!-- Dropdown -->
+        <div
+          class="invisible absolute left-1/2 top-[68px] w-64 -translate-x-1/2 translate-y-2 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-[#135443] dark:bg-[#02382A]"
+        >
+          <div class="px-3 py-2">
+            <p
+              class="text-xs font-bold text-slate-400 dark:text-gray-400"
             >
-              <i class="fa-solid fa-mobile-screen-button text-sm"></i>
-              অ্যাপ ডাউনলোড
-              <i
-                class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"
-              ></i>
-            </button>
+              GET THE APP
+            </p>
 
-            <!-- Dropdown -->
+            <p
+              data-bn="আপনার মোবাইলে Edurlab ব্যবহার করুন"
+              data-en="Use Edurlab on your mobile"
+              class="mt-1 text-sm font-semibold text-slate-800 dark:text-white"
+            >
+              আপনার মোবাইলে Edurlab ব্যবহার করুন
+            </p>
+          </div>
+
+          <!-- Play Store -->
+          <a
+            href="#"
+            class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
+          >
             <div
-              class="invisible absolute left-1/2 top-[68px] w-64 -translate-x-1/2 translate-y-2 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-[#135443] dark:bg-[#02382A]"
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
             >
-              <div class="px-3 py-2">
-                <p class="text-xs font-bold text-slate-400 dark:text-gray-400">
-                  GET THE APP
-                </p>
-
-                <p
-                  class="mt-1 text-sm font-semibold text-slate-800 dark:text-white"
-                >
-                  আপনার মোবাইলে Edurlab ব্যবহার করুন
-                </p>
-              </div>
-
-              <!-- Play Store -->
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
-              >
-                <div
-                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
-                >
-                  <i class="fa-brands fa-google-play text-lg"></i>
-                </div>
-
-                <div>
-                  <p
-                    class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
-                  >
-                    GET IT ON
-                  </p>
-
-                  <p class="text-sm font-bold text-slate-800 dark:text-white">
-                    Google Play
-                  </p>
-                </div>
-
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
-                ></i>
-              </a>
-
-              <!-- App Store -->
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
-              >
-                <div
-                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
-                >
-                  <i class="fa-brands fa-apple text-xl"></i>
-                </div>
-
-                <div>
-                  <p
-                    class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
-                  >
-                    DOWNLOAD ON THE
-                  </p>
-
-                  <p class="text-sm font-bold text-slate-800 dark:text-white">
-                    App Store
-                  </p>
-                </div>
-
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
-                ></i>
-              </a>
+              <i class="fa-brands fa-google-play text-lg"></i>
             </div>
-          </div>
-        </nav>
 
-        <!-- ================= DESKTOP ACTIONS ================= -->
-        <div class="hidden items-center gap-3 lg:flex">
-          <!-- Language -->
-          <div
-            class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
-          >
-            <button
-              class="rounded-full bg-[#00BA74] px-3 py-1.5 text-white shadow-sm"
-            >
-              বাংলা
-            </button>
+            <div>
+              <p
+                class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
+              >
+                GET IT ON
+              </p>
 
-            <button
-              class="px-3 py-1.5 text-slate-600 transition hover:text-[#00BA74] dark:text-gray-300"
-            >
-              EN
-            </button>
-          </div>
+              <p
+                class="text-sm font-bold text-slate-800 dark:text-white"
+              >
+                Google Play
+              </p>
+            </div>
 
-          <!-- Theme -->
-          <button
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle theme"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 shadow-sm transition-all hover:scale-110 hover:border-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
-          >
-            <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
-          </button>
-
-          <!-- Login -->
-          <a
-            href="#login"
-            class="rounded-full border border-[#00BA74] px-5 py-2.5 text-sm font-bold text-[#00BA74] transition-all duration-300 hover:bg-[#00BA74] hover:text-white hover:shadow-lg hover:shadow-[#00BA74]/20"
-          >
-            লগইন
+            <i
+              class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
+            ></i>
           </a>
 
-          <!-- Registration -->
+          <!-- App Store -->
           <a
-            href="#registration"
-            class="flex items-center gap-2 rounded-full bg-[#00BA74] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#009c62] hover:shadow-xl"
+            href="#"
+            class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
           >
-            রেজিস্ট্রেশন
-            <i class="fa-solid fa-arrow-right text-xs"></i>
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
+            >
+              <i class="fa-brands fa-apple text-xl"></i>
+            </div>
+
+            <div>
+              <p
+                class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
+              >
+                DOWNLOAD ON THE
+              </p>
+
+              <p
+                class="text-sm font-bold text-slate-800 dark:text-white"
+              >
+                App Store
+              </p>
+            </div>
+
+            <i
+              class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
+            ></i>
           </a>
         </div>
+      </div>
+    </nav>
 
-        <!-- ================= MOBILE MENU BUTTON ================= -->
+    <!-- ================= DESKTOP ACTIONS ================= -->
+    <div class="hidden items-center gap-3 lg:flex">
+      <!-- Language -->
+      <div
+        class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
+      >
         <button
-          id="mobileMenuBtn"
           type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-100 text-xl text-slate-800 transition-all hover:scale-105 hover:border-[#00BA74] hover:text-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-white lg:hidden"
+          data-lang="bn"
+          class="lang-btn rounded-full bg-[#00BA74] px-3 py-1.5 text-white shadow-sm"
         >
-          <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+          বাংলা
+        </button>
+
+        <button
+          type="button"
+          data-lang="en"
+          class="lang-btn px-3 py-1.5 text-slate-600 transition hover:text-[#00BA74] dark:text-gray-300"
+        >
+          EN
         </button>
       </div>
 
-      <!-- ================= MOBILE MENU ================= -->
-      <div
-        id="mobileMenu"
-        class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-4 shadow-xl dark:border-[#135443] dark:bg-[#01281E] lg:hidden"
+      <!-- Theme -->
+      <button
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle theme"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 shadow-sm transition-all hover:scale-110 hover:border-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
       >
-        <!-- Mobile Navigation -->
-        <nav class="flex flex-col gap-1 font-sans">
-          <a
-            href="#home"
-            class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10 dark:text-emerald-400"
-          >
-            <i class="fa-solid fa-house mr-3 w-5"></i>
-            <span>হোম</span>
-          </a>
+        <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+      </button>
 
-          <a
-            href="#about"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-          >
-            <i class="fa-solid fa-circle-info mr-3 w-5"></i>
-            <span>আমাদের সম্পর্কে</span>
-          </a>
+      <!-- Login -->
+      <a
+        href="#login"
+        class="rounded-full border border-[#00BA74] px-5 py-2.5 text-sm font-bold text-[#00BA74] transition-all duration-300 hover:bg-[#00BA74] hover:text-white hover:shadow-lg hover:shadow-[#00BA74]/20"
+      >
+        <span data-bn="লগইন" data-en="Login">
+          লগইন
+        </span>
+      </a>
 
-          <a
-            href="#features"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-          >
-            <i class="fa-solid fa-layer-group mr-3 w-5"></i>
-            <span>বৈশিষ্ট্য</span>
-          </a>
+      <!-- Registration -->
+      <a
+        href="#registration"
+        class="flex items-center gap-2 rounded-full bg-[#00BA74] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#009c62] hover:shadow-xl"
+      >
+        <span data-bn="রেজিস্ট্রেশন" data-en="Registration">
+          রেজিস্ট্রেশন
+        </span>
 
-          <a
-            href="#solutions"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-          >
-            <i class="fa-solid fa-lightbulb mr-3 w-5"></i>
-            <span>সমাধান</span>
-          </a>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
 
-          <a
-            href="#reviews"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-          >
-            <i class="fa-solid fa-star mr-3 w-5"></i>
-            <span>রিভিউ</span>
-          </a>
+    <!-- ================= MOBILE MENU BUTTON ================= -->
+    <button
+      id="mobileMenuBtn"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-100 text-xl text-slate-800 transition-all hover:scale-105 hover:border-[#00BA74] hover:text-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-white lg:hidden"
+    >
+      <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+    </button>
+  </div>
 
-          <a
-            href="#faq"
-            class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-          >
-            <i class="fa-solid fa-circle-question mr-3 w-5"></i>
-            <span>প্রশ্নোত্তর</span>
-          </a>
+  <!-- ================= MOBILE MENU ================= -->
+  <div
+    id="mobileMenu"
+    class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-4 shadow-xl dark:border-[#135443] dark:bg-[#01281E] lg:hidden"
+  >
+    <!-- Mobile Navigation -->
+    <nav class="flex flex-col gap-1 font-sans">
+      <!-- Home -->
+      <a
+        href="#home"
+        class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10 dark:text-emerald-400"
+      >
+        <i class="fa-solid fa-house mr-3 w-5"></i>
 
-          <!-- Mobile App Download -->
-          <div
-            class="mt-1 rounded-xl border border-slate-200 dark:border-[#135443]"
-          >
-            <button
-              id="mobileAppBtn"
-              type="button"
-              class="flex w-full items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
-            >
-              <i class="fa-solid fa-mobile-screen-button mr-3 w-5"></i>
+        <span data-bn="হোম" data-en="Home">
+          হোম
+        </span>
+      </a>
 
-              <span>অ্যাপ ডাউনলোড</span>
+      <!-- About -->
+      <a
+        href="#about"
+        class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+      >
+        <i class="fa-solid fa-circle-info mr-3 w-5"></i>
 
-              <i
-                id="mobileAppIcon"
-                class="fa-solid fa-chevron-down ml-auto text-xs transition-transform duration-300"
-              ></i>
-            </button>
+        <span data-bn="আমাদের সম্পর্কে" data-en="About Us">
+          আমাদের সম্পর্কে
+        </span>
+      </a>
 
-            <!-- Mobile App Links -->
-            <div id="mobileAppMenu" class="hidden px-3 pb-3">
-              <!-- Play Store -->
-              <a
-                href="#"
-                class="mt-1 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
-              >
-                <div
-                  class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
-                >
-                  <i class="fa-brands fa-google-play"></i>
-                </div>
+      <!-- Features -->
+      <a
+        href="#features"
+        class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+      >
+        <i class="fa-solid fa-layer-group mr-3 w-5"></i>
 
-                <div>
-                  <p class="text-[9px] text-slate-400">GET IT ON</p>
-                  <p class="text-xs font-bold text-slate-800 dark:text-white">
-                    Google Play
-                  </p>
-                </div>
-              </a>
+        <span data-bn="বৈশিষ্ট্য" data-en="Features">
+          বৈশিষ্ট্য
+        </span>
+      </a>
 
-              <!-- App Store -->
-              <a
-                href="#"
-                class="mt-2 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
-              >
-                <div
-                  class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
-                >
-                  <i class="fa-brands fa-apple text-lg"></i>
-                </div>
+      <!-- Solutions -->
+      <a
+        href="#solutions"
+        class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+      >
+        <i class="fa-solid fa-lightbulb mr-3 w-5"></i>
 
-                <div>
-                  <p class="text-[9px] text-slate-400">DOWNLOAD ON THE</p>
-                  <p class="text-xs font-bold text-slate-800 dark:text-white">
-                    App Store
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </nav>
+        <span data-bn="সমাধান" data-en="Solutions">
+          সমাধান
+        </span>
+      </a>
 
-        <!-- Mobile Controls -->
-        <div
-          class="mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 dark:border-[#135443]"
+      <!-- Reviews -->
+      <a
+        href="#reviews"
+        class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+      >
+        <i class="fa-solid fa-star mr-3 w-5"></i>
+
+        <span data-bn="রিভিউ" data-en="Reviews">
+          রিভিউ
+        </span>
+      </a>
+
+      <!-- FAQ -->
+      <a
+        href="#faq"
+        class="mobile-nav-link flex items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+      >
+        <i class="fa-solid fa-circle-question mr-3 w-5"></i>
+
+        <span data-bn="প্রশ্নোত্তর" data-en="FAQ">
+          প্রশ্নোত্তর
+        </span>
+      </a>
+
+      <!-- ================= MOBILE APP DOWNLOAD ================= -->
+      <div
+        class="mt-1 rounded-xl border border-slate-200 dark:border-[#135443]"
+      >
+        <button
+          id="mobileAppBtn"
+          type="button"
+          class="flex w-full items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
         >
-          <!-- Language + Theme -->
-          <div class="flex items-center justify-between">
-            <!-- Language -->
-            <div
-              class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
-            >
-              <button class="rounded-full bg-[#00BA74] px-4 py-1.5 text-white">
-                বাংলা
-              </button>
+          <i class="fa-solid fa-mobile-screen-button mr-3 w-5"></i>
 
-              <button
-                class="px-4 py-1.5 text-slate-700 transition hover:text-[#00BA74] dark:text-gray-300"
-              >
-                EN
-              </button>
+          <span data-bn="অ্যাপ ডাউনলোড" data-en="Download App">
+            অ্যাপ ডাউনলোড
+          </span>
+
+          <i
+            id="mobileAppIcon"
+            class="fa-solid fa-chevron-down ml-auto text-xs transition-transform duration-300"
+          ></i>
+        </button>
+
+        <!-- Mobile App Links -->
+        <div id="mobileAppMenu" class="hidden px-3 pb-3">
+          <!-- Play Store -->
+          <a
+            href="#"
+            class="mt-1 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
+          >
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
+            >
+              <i class="fa-brands fa-google-play"></i>
             </div>
 
-            <!-- Theme -->
-            <button
-              id="mobileThemeToggle"
-              type="button"
-              aria-label="Toggle theme"
-              class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 transition hover:scale-110 dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
-            >
-              <i id="mobileThemeIcon" class="fa-solid fa-moon"></i>
-            </button>
-          </div>
+            <div>
+              <p class="text-[9px] text-slate-400">
+                GET IT ON
+              </p>
 
-          <!-- Mobile Login + Registration -->
-          <div class="grid grid-cols-2 gap-3">
-            <a
-              href="#login"
-              class="flex items-center justify-center gap-2 rounded-xl border border-[#00BA74] px-4 py-3 text-sm font-bold text-[#00BA74] transition-all hover:bg-[#00BA74] hover:text-white"
-            >
-              <i class="fa-solid fa-right-to-bracket"></i>
-              লগইন
-            </a>
+              <p class="text-xs font-bold text-slate-800 dark:text-white">
+                Google Play
+              </p>
+            </div>
+          </a>
 
-            <a
-              href="#registration"
-              class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:bg-[#009c62]"
+          <!-- App Store -->
+          <a
+            href="#"
+            class="mt-2 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
+          >
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
             >
-              <i class="fa-solid fa-user-plus"></i>
-              রেজিস্ট্রেশন
-            </a>
-          </div>
+              <i class="fa-brands fa-apple text-lg"></i>
+            </div>
+
+            <div>
+              <p class="text-[9px] text-slate-400">
+                DOWNLOAD ON THE
+              </p>
+
+              <p class="text-xs font-bold text-slate-800 dark:text-white">
+                App Store
+              </p>
+            </div>
+          </a>
         </div>
       </div>
-    </header>
+    </nav>
+
+    <!-- ================= MOBILE CONTROLS ================= -->
+    <div
+      class="mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 dark:border-[#135443]"
+    >
+      <!-- Language + Theme -->
+      <div class="flex items-center justify-between">
+        <!-- Language -->
+        <div
+          class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
+        >
+          <button
+            type="button"
+            data-lang="bn"
+            class="lang-btn rounded-full bg-[#00BA74] px-4 py-1.5 text-white"
+          >
+            বাংলা
+          </button>
+
+          <button
+            type="button"
+            data-lang="en"
+            class="lang-btn px-4 py-1.5 text-slate-700 transition hover:text-[#00BA74] dark:text-gray-300"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- Theme -->
+        <button
+          id="mobileThemeToggle"
+          type="button"
+          aria-label="Toggle theme"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 transition hover:scale-110 dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
+        >
+          <i id="mobileThemeIcon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Login + Registration -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Login -->
+        <a
+          href="#login"
+          class="flex items-center justify-center gap-2 rounded-xl border border-[#00BA74] px-4 py-3 text-sm font-bold text-[#00BA74] transition-all hover:bg-[#00BA74] hover:text-white"
+        >
+          <i class="fa-solid fa-right-to-bracket"></i>
+
+          <span data-bn="লগইন" data-en="Login">
+            লগইন
+          </span>
+        </a>
+
+        <!-- Registration -->
+        <a
+          href="#registration"
+          class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:bg-[#009c62]"
+        >
+          <i class="fa-solid fa-user-plus"></i>
+
+          <span data-bn="রেজিস্ট্রেশন" data-en="Registration">
+            রেজিস্ট্রেশন
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
 
     <!-- HERO SECTION -->
     <section
@@ -1879,121 +1982,167 @@
       id="solutions"
       class="relative overflow-hidden bg-white py-20 transition-colors dark:bg-[#01281E]"
     >
-      <!-- Background Glow -->
+      <!-- ================= BACKGROUND GLOW ================= -->
       <div
-        class="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-emerald-300/20 blur-3xl dark:bg-emerald-500/10"
+        class="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-emerald-300/20 blur-3xl dark:bg-emerald-500/10"
       ></div>
 
       <div
-        class="pointer-events-none absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl dark:bg-cyan-500/10"
+        class="pointer-events-none absolute -right-40 bottom-10 h-[28rem] w-[28rem] rounded-full bg-cyan-300/20 blur-3xl dark:bg-cyan-500/10"
       ></div>
 
       <div
-        class="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-300/10 blur-3xl dark:bg-purple-500/5"
+        class="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-300/10 blur-3xl dark:bg-purple-500/5"
       ></div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <!-- Section Heading -->
-        <div class="mx-auto mb-16 max-w-2xl space-y-4 text-center">
+        <!-- ================= HEADING ================= -->
+        <div class="mx-auto mb-14 max-w-3xl text-center">
           <div
-            class="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#00BA74] shadow-sm dark:border-[#00BA74]/30 dark:bg-[#034333]"
+            class="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#00BA74] shadow-sm dark:border-[#00BA74]/30 dark:bg-[#034333]"
           >
-            <i class="fa-regular fa-compass animate-pulse"></i>
-            <span>ইনস্টিটিউট সিলেক্ট করুন</span>
+            <span class="relative flex h-2 w-2">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00BA74] opacity-75"
+              ></span>
+
+              <span
+                class="relative inline-flex h-2 w-2 rounded-full bg-[#00BA74]"
+              ></span>
+            </span>
+
+            ইনস্টিটিউট সিলেক্ট করুন
           </div>
 
           <h2
-            class="text-2xl font-black leading-tight text-slate-900 sm:text-4xl dark:text-white"
+            class="text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white"
           >
             সকল প্রতিষ্ঠানের জন্য
-            <span class="text-[#00BA74]">বিশেষায়িত সমাধান</span>
+            <span class="relative inline-block text-[#00BA74]">
+              বিশেষায়িত সমাধান
+
+              <span
+                class="absolute -bottom-1 left-0 h-1 w-full origin-left scale-x-0 rounded-full bg-[#00BA74] transition-transform duration-500 group-hover:scale-x-100"
+              ></span>
+            </span>
           </h2>
 
           <p
-            class="text-sm font-normal leading-relaxed text-slate-600 sm:text-base dark:text-gray-300"
+            class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base dark:text-gray-300"
           >
             আপনার প্রতিষ্ঠানের ক্যাটাগরি যাই হোক না কেন,
-            <span class="font-semibold text-[#00BA74]">Edurlab</span>
+            <span class="font-bold text-[#00BA74]">Edurlab</span>
             ঠিক সেভাবেই তৈরি।
           </p>
         </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <!-- ================= SCHOOL ================= -->
+        <!-- ================= CARDS ================= -->
+        <div class="grid grid-cols-1 gap-7 md:grid-cols-3">
+          <!-- =================================================
+           SCHOOL
+      ================================================== -->
           <div
-            class="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/10 dark:border-[#135443] dark:bg-[#033B2D]/70"
+            class="group relative overflow-hidden rounded-[2rem] border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-7 shadow-lg shadow-blue-500/5 transition-all duration-500 hover:-translate-y-3 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/15 dark:border-blue-900/40 dark:from-[#06344A] dark:via-[#033B2D] dark:to-[#023326]"
           >
-            <!-- Glow -->
+            <!-- Animated Glow -->
             <div
-              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl transition-all duration-500 group-hover:bg-blue-500/20"
+              class="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-blue-400/20 blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-blue-400/30"
             ></div>
 
-            <!-- Decorative Circle -->
+            <!-- Decorative Rings -->
             <div
-              class="pointer-events-none absolute right-5 top-5 h-20 w-20 rounded-full border border-blue-500/10 transition-all duration-700 group-hover:scale-150"
+              class="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full border border-blue-400/10 transition-all duration-700 group-hover:scale-150"
             ></div>
 
-            <div class="relative flex h-full flex-col justify-between">
-              <div class="space-y-7">
-                <!-- Icon -->
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-400/30 bg-blue-100 text-3xl text-blue-600 shadow-lg shadow-blue-500/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-blue-500/30 dark:bg-blue-500/15 dark:text-blue-400"
-                >
-                  <i class="fa-solid fa-school"></i>
+            <div
+              class="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full border border-blue-400/10 transition-all duration-700 group-hover:scale-125"
+            ></div>
+
+            <div class="relative flex h-full flex-col">
+              <!-- Icon -->
+              <div
+                class="relative mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-400/30 bg-blue-100 text-3xl text-blue-600 shadow-lg shadow-blue-500/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-blue-500/40 dark:bg-blue-500/15 dark:text-blue-400"
+              >
+                <i class="fa-solid fa-school"></i>
+
+                <!-- Floating Dot -->
+                <span
+                  class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-blue-500 opacity-0 transition-opacity duration-300 group-hover:animate-ping group-hover:opacity-100"
+                ></span>
+              </div>
+
+              <!-- Title -->
+              <div class="mb-5">
+                <div class="mb-2 flex flex-wrap items-center gap-2">
+                  <h3
+                    class="text-2xl font-black text-slate-900 transition-colors duration-300 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
+                  >
+                    স্কুল
+                  </h3>
+
+                  <span
+                    class="rounded-full bg-blue-100 px-2.5 py-1 text-[9px] font-extrabold tracking-wider text-blue-600 dark:bg-blue-500/10 dark:text-blue-400"
+                  >
+                    SCHOOL
+                  </span>
                 </div>
 
-                <!-- Content -->
-                <div>
-                  <div class="mb-2 flex items-center gap-2">
-                    <h3
-                      class="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
-                    >
-                      স্কুল
-                    </h3>
+                <p class="text-sm leading-7 text-slate-600 dark:text-gray-300">
+                  শিক্ষার্থী, উপস্থিতি, ডিজিটাল এক্সাম রিপোর্ট ও ফি কালেকশন
+                  সহজীকরণ।
+                </p>
+              </div>
 
-                    <span
-                      class="rounded-full bg-blue-100 px-2 py-0.5 text-[9px] font-bold text-blue-600 dark:bg-blue-500/10 dark:text-blue-400"
-                    >
-                      SCHOOL
-                    </span>
-                  </div>
+              <!-- ================= HIGHLIGHT FEATURES ================= -->
+              <div class="mb-7 grid grid-cols-3 gap-2">
+                <div
+                  class="rounded-xl border border-blue-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-blue-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-user-graduate mb-2 text-lg text-blue-500"
+                  ></i>
 
                   <p
-                    class="text-sm leading-relaxed text-slate-600 dark:text-gray-300"
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
-                    শিক্ষার্থী, উপস্থিতি, ডিজিটাল এক্সাম রিপোর্ট ও ফি কালেকশন
-                    সহজীকরণ।
+                    Student
                   </p>
                 </div>
 
-                <!-- Mini Features -->
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
-                  >
-                    Student
-                  </span>
+                <div
+                  class="rounded-xl border border-green-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-md dark:border-green-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-calendar-check mb-2 text-lg text-green-500"
+                  ></i>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
                     Attendance
-                  </span>
+                  </p>
+                </div>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                <div
+                  class="rounded-xl border border-orange-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-md dark:border-orange-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-chart-line mb-2 text-lg text-orange-500"
+                  ></i>
+
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
                     Result
-                  </span>
+                  </p>
                 </div>
               </div>
 
               <!-- Button -->
-              <div class="pt-8">
+              <div class="mt-auto">
                 <a
                   href="#"
-                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:bg-blue-600 hover:shadow-blue-500/40"
+                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:bg-blue-600 hover:shadow-blue-500/40"
                 >
                   <i
                     class="fa-regular fa-eye transition-transform duration-300 group-hover/btn:scale-125"
@@ -2009,13 +2158,15 @@
             </div>
           </div>
 
-          <!-- ================= MADRASAH ================= -->
+          <!-- =================================================
+           MADRASAH
+      ================================================== -->
           <div
-            class="group relative overflow-hidden rounded-[2rem] border-2 border-[#00BA74] bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-8 shadow-xl shadow-[#00BA74]/10 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#00BA74]/25 dark:bg-gradient-to-br dark:from-[#033B2D] dark:via-[#023326] dark:to-[#01281E]"
+            class="group relative overflow-hidden rounded-[2rem] border-2 border-[#00BA74] bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-7 shadow-xl shadow-[#00BA74]/10 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#00BA74]/25 dark:from-[#063B2D] dark:via-[#023326] dark:to-[#01281E]"
           >
             <!-- Featured Badge -->
             <div
-              class="absolute right-6 top-0 rounded-b-xl bg-[#00BA74] px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg shadow-[#00BA74]/30"
+              class="absolute right-6 top-0 overflow-hidden rounded-b-xl bg-[#00BA74] px-4 py-2 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-lg shadow-[#00BA74]/30"
             >
               <i class="fa-solid fa-star mr-1 animate-pulse"></i>
               বিশেষ ফিচার
@@ -2023,82 +2174,101 @@
 
             <!-- Glow -->
             <div
-              class="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#00BA74]/15 blur-3xl transition-all duration-500 group-hover:bg-[#00BA74]/25"
+              class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#00BA74]/15 blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-[#00BA74]/25"
             ></div>
 
             <div
-              class="pointer-events-none absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-emerald-400/10 blur-3xl"
+              class="pointer-events-none absolute -bottom-24 -left-20 h-52 w-52 rounded-full bg-emerald-400/10 blur-3xl"
             ></div>
 
-            <div class="relative flex h-full flex-col justify-between">
-              <div class="space-y-7">
-                <!-- Icon -->
-                <div
-                  class="relative mt-2 flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/40 bg-emerald-100 text-3xl text-emerald-600 shadow-lg shadow-emerald-500/20 transition-all duration-500 group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-[#00BA74] group-hover:text-white group-hover:shadow-[#00BA74]/40 dark:bg-[#00BA74]/15 dark:text-emerald-400"
-                >
-                  <i class="fa-solid fa-mosque"></i>
+            <div class="relative flex h-full flex-col">
+              <!-- Icon -->
+              <div
+                class="relative mb-6 mt-2 flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/40 bg-emerald-100 text-3xl text-emerald-600 shadow-lg shadow-emerald-500/20 transition-all duration-500 group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-[#00BA74] group-hover:text-white group-hover:shadow-[#00BA74]/40 dark:bg-[#00BA74]/15 dark:text-emerald-400"
+              >
+                <i class="fa-solid fa-mosque"></i>
 
-                  <!-- Icon Ping -->
-                  <span
-                    class="absolute -right-1 -top-1 h-3 w-3 animate-ping rounded-full bg-[#00BA74]"
-                  ></span>
+                <span
+                  class="absolute -right-1 -top-1 h-3 w-3 animate-ping rounded-full bg-[#00BA74]"
+                ></span>
+
+                <span
+                  class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#00BA74]"
+                ></span>
+              </div>
+
+              <!-- Title -->
+              <div class="mb-5">
+                <div class="mb-2 flex flex-wrap items-center gap-2">
+                  <h3
+                    class="text-2xl font-black text-slate-900 transition-colors duration-300 group-hover:text-[#00BA74] dark:text-white"
+                  >
+                    মাদ্রাসা
+                  </h3>
 
                   <span
-                    class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#00BA74]"
-                  ></span>
+                    class="rounded-full bg-emerald-100 px-2.5 py-1 text-[9px] font-extrabold tracking-wider text-emerald-600 dark:bg-[#00BA74]/10 dark:text-emerald-300"
+                  >
+                    FEATURED
+                  </span>
                 </div>
 
-                <!-- Content -->
-                <div>
-                  <div class="mb-2 flex items-center gap-2">
-                    <h3
-                      class="text-xl font-bold text-slate-900 transition-colors group-hover:text-[#00BA74] dark:text-white"
-                    >
-                      মাদ্রাসা
-                    </h3>
+                <p class="text-sm leading-7 text-slate-600 dark:text-gray-300">
+                  কুরআন, হাদিস, হিফজ হিসাব ও আরবি ফরম্যাটে রেজাল্ট কার্ড তৈরির
+                  সুব্যবস্থা।
+                </p>
+              </div>
 
-                    <span
-                      class="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-bold text-emerald-600 dark:bg-[#00BA74]/10 dark:text-emerald-300"
-                    >
-                      FEATURED
-                    </span>
-                  </div>
+              <!-- Highlight Features -->
+              <div class="mb-7 grid grid-cols-3 gap-2">
+                <div
+                  class="rounded-xl border border-emerald-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-md dark:border-emerald-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-book-quran mb-2 text-lg text-[#00BA74]"
+                  ></i>
 
                   <p
-                    class="text-sm leading-relaxed text-slate-600 dark:text-gray-300"
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
-                    কুরআন, হাদিস, হিফজ হিসাব ও আরবি ফরম্যাটে রেজাল্ট কার্ড তৈরির
-                    সুব্যবস্থা।
+                    Quran
                   </p>
                 </div>
 
-                <!-- Mini Features -->
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
-                  >
-                    Quran
-                  </span>
+                <div
+                  class="rounded-xl border border-amber-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-md dark:border-amber-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-star-and-crescent mb-2 text-lg text-amber-500"
+                  ></i>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
                     Hifz
-                  </span>
+                  </p>
+                </div>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                <div
+                  class="rounded-xl border border-purple-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-md dark:border-purple-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-file-lines mb-2 text-lg text-purple-500"
+                  ></i>
+
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
-                    Arabic Result
-                  </span>
+                    Result
+                  </p>
                 </div>
               </div>
 
               <!-- Button -->
-              <div class="pt-8">
+              <div class="mt-auto">
                 <a
                   href="#"
-                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/25 transition-all duration-300 hover:bg-emerald-600 hover:shadow-[#00BA74]/40"
+                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/25 transition-all duration-300 hover:bg-emerald-600 hover:shadow-[#00BA74]/40"
                 >
                   <i
                     class="fa-regular fa-eye transition-transform duration-300 group-hover/btn:scale-125"
@@ -2114,79 +2284,105 @@
             </div>
           </div>
 
-          <!-- ================= COLLEGE ================= -->
+          <!-- =================================================
+           COLLEGE
+      ================================================== -->
           <div
-            class="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/10 dark:border-[#135443] dark:bg-[#033B2D]/70"
+            class="group relative overflow-hidden rounded-[2rem] border border-purple-200 bg-gradient-to-br from-purple-50 via-white to-slate-50 p-7 shadow-lg shadow-purple-500/5 transition-all duration-500 hover:-translate-y-3 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/15 dark:border-purple-900/40 dark:from-[#382653] dark:via-[#033B2D] dark:to-[#023326]"
           >
             <!-- Glow -->
             <div
-              class="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl transition-all duration-500 group-hover:bg-purple-500/20"
+              class="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-purple-400/20 blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-purple-400/30"
             ></div>
 
             <div
-              class="pointer-events-none absolute bottom-5 right-5 h-20 w-20 rounded-full border border-purple-500/10 transition-all duration-700 group-hover:scale-150"
+              class="pointer-events-none absolute -bottom-8 -right-8 h-32 w-32 rounded-full border border-purple-400/10 transition-all duration-700 group-hover:scale-150"
             ></div>
 
-            <div class="relative flex h-full flex-col justify-between">
-              <div class="space-y-7">
-                <!-- Icon -->
-                <div
-                  class="flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/30 bg-purple-100 text-3xl text-purple-600 shadow-lg shadow-purple-500/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white group-hover:shadow-purple-500/30 dark:bg-purple-500/15 dark:text-purple-400"
-                >
-                  <i class="fa-solid fa-building-columns"></i>
+            <div class="relative flex h-full flex-col">
+              <!-- Icon -->
+              <div
+                class="relative mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/30 bg-purple-100 text-3xl text-purple-600 shadow-lg shadow-purple-500/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white group-hover:shadow-purple-500/40 dark:bg-purple-500/15 dark:text-purple-400"
+              >
+                <i class="fa-solid fa-building-columns"></i>
+
+                <span
+                  class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-purple-500 opacity-0 transition-opacity duration-300 group-hover:animate-ping group-hover:opacity-100"
+                ></span>
+              </div>
+
+              <!-- Title -->
+              <div class="mb-5">
+                <div class="mb-2 flex flex-wrap items-center gap-2">
+                  <h3
+                    class="text-2xl font-black text-slate-900 transition-colors duration-300 group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400"
+                  >
+                    কলেজ
+                  </h3>
+
+                  <span
+                    class="rounded-full bg-purple-100 px-2.5 py-1 text-[9px] font-extrabold tracking-wider text-purple-600 dark:bg-purple-500/10 dark:text-purple-400"
+                  >
+                    COLLEGE
+                  </span>
                 </div>
 
-                <!-- Content -->
-                <div>
-                  <div class="mb-2 flex items-center gap-2">
-                    <h3
-                      class="text-xl font-bold text-slate-900 transition-colors group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400"
-                    >
-                      কলেজ
-                    </h3>
+                <p class="text-sm leading-7 text-slate-600 dark:text-gray-300">
+                  বিভাগ, সেমিস্টার, বিষয়ভিত্তিক রেজাল্ট, টিচার্স পে-রোল ও এডমিন
+                  রুটিন।
+                </p>
+              </div>
 
-                    <span
-                      class="rounded-full bg-purple-100 px-2 py-0.5 text-[9px] font-bold text-purple-600 dark:bg-purple-500/10 dark:text-purple-400"
-                    >
-                      COLLEGE
-                    </span>
-                  </div>
+              <!-- Highlight Features -->
+              <div class="mb-7 grid grid-cols-3 gap-2">
+                <div
+                  class="rounded-xl border border-purple-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-md dark:border-purple-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-layer-group mb-2 text-lg text-purple-500"
+                  ></i>
 
                   <p
-                    class="text-sm leading-relaxed text-slate-600 dark:text-gray-300"
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
-                    বিভাগ, সেমিস্টার, বিষয়ভিত্তিক রেজাল্ট, টিচার্স পে-রোল ও
-                    এডমিন রুটিন।
+                    Department
                   </p>
                 </div>
 
-                <!-- Mini Features -->
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
-                  >
-                    Department
-                  </span>
+                <div
+                  class="rounded-xl border border-cyan-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-md dark:border-cyan-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-money-check-dollar mb-2 text-lg text-cyan-500"
+                  ></i>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
                     Payroll
-                  </span>
+                  </p>
+                </div>
 
-                  <span
-                    class="rounded-lg bg-white px-2.5 py-1 text-[10px] font-medium text-slate-500 shadow-sm dark:bg-[#01281E] dark:text-gray-300"
+                <div
+                  class="rounded-xl border border-indigo-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-300 hover:shadow-md dark:border-indigo-900/30 dark:bg-[#01281E]"
+                >
+                  <i
+                    class="fa-solid fa-calendar-days mb-2 text-lg text-indigo-500"
+                  ></i>
+
+                  <p
+                    class="text-[10px] font-bold text-slate-600 dark:text-gray-300"
                   >
                     Routine
-                  </span>
+                  </p>
                 </div>
               </div>
 
               <!-- Button -->
-              <div class="pt-8">
+              <div class="mt-auto">
                 <a
                   href="#"
-                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-purple-500 px-4 py-3 text-sm font-bold text-white shadow-lg shadow-purple-500/20 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/40"
+                  class="group/btn flex w-full items-center justify-center gap-2 rounded-xl bg-purple-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-purple-500/20 transition-all duration-300 hover:bg-purple-600 hover:shadow-purple-500/40"
                 >
                   <i
                     class="fa-regular fa-eye transition-transform duration-300 group-hover/btn:scale-125"
@@ -3606,6 +3802,55 @@
 
     <!-- JS Logics -->
     <script>
+      // ================= LANGUAGE SWITCHER =================
+
+const languageButtons = document.querySelectorAll(".lang-btn");
+const translatableElements = document.querySelectorAll("[data-bn][data-en]");
+
+/**
+ * Page er sob text ebong language button er style update kore
+ * @param {string} language - 'en' ba 'bn'
+ */
+function setLanguage(language) {
+  // 1. Text update kora
+  translatableElements.forEach((element) => {
+    element.textContent = language === "en" ? element.dataset.en : element.dataset.bn;
+  });
+
+  // 2. Active/Inactive Button Style update kora
+  languageButtons.forEach((button) => {
+    const isActive = button.dataset.lang === language;
+
+    // Active state classes
+    button.classList.toggle("bg-[#00BA74]", isActive);
+    button.classList.toggle("text-white", isActive);
+
+    // Inactive state classes
+    button.classList.toggle("text-slate-600", !isActive);
+    button.classList.toggle("dark:text-gray-300", !isActive);
+  });
+
+  // 3. LocalStorage-e preference save kora
+  localStorage.setItem("edurlab-language", language);
+}
+
+// 4. Event Listeners add kora
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedLanguage = button.dataset.lang;
+    setLanguage(selectedLanguage);
+  });
+});
+
+// 5. Page Load er somoy Saved Language set kora
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLanguage = localStorage.getItem("edurlab-language") || "bn";
+  setLanguage(savedLanguage);
+});
+
+
+
+        // end
       const featureSlides = document.querySelectorAll(".feature-slide");
       const featureDots = document.querySelectorAll(".feature-dot");
 
