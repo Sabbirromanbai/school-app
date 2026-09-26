@@ -475,8 +475,8 @@
       <div
         class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
-        <!-- Logo -->
-        <a href="#home" class="group flex items-center gap-3">
+        <!-- ================= LOGO ================= -->
+        <a href="#home" class="group flex shrink-0 items-center gap-3">
           <div
             class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#00BA74] to-emerald-400 text-xl font-bold text-white shadow-lg shadow-[#00BA74]/30 transition-transform group-hover:scale-110"
           >
@@ -491,16 +491,16 @@
             </span>
 
             <span
-              class="block text-[10px] font-semibold uppercase tracking-wider text-[#00BA74] dark:text-emerald-400"
+              class="block text-[9px] font-semibold uppercase tracking-wider text-[#00BA74] dark:text-emerald-400 sm:text-[10px]"
             >
               Smart Education System
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- ================= DESKTOP NAVIGATION ================= -->
         <nav
-          class="hidden items-center gap-8 text-sm font-semibold text-slate-600 dark:text-gray-200 lg:flex"
+          class="hidden items-center gap-6 text-sm font-semibold text-slate-600 dark:text-gray-200 xl:flex"
         >
           <a
             href="#home"
@@ -528,22 +528,109 @@
           <a href="#faq" class="transition-colors hover:text-[#00BA74]">
             প্রশ্নোত্তর
           </a>
+
+          <!-- ================= APP DOWNLOAD DROPDOWN ================= -->
+          <div class="group relative">
+            <button
+              type="button"
+              class="flex items-center gap-2 py-7 transition-colors hover:text-[#00BA74]"
+            >
+              <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+              অ্যাপ ডাউনলোড
+              <i
+                class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"
+              ></i>
+            </button>
+
+            <!-- Dropdown -->
+            <div
+              class="invisible absolute left-1/2 top-[68px] w-64 -translate-x-1/2 translate-y-2 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:border-[#135443] dark:bg-[#02382A]"
+            >
+              <div class="px-3 py-2">
+                <p class="text-xs font-bold text-slate-400 dark:text-gray-400">
+                  GET THE APP
+                </p>
+
+                <p
+                  class="mt-1 text-sm font-semibold text-slate-800 dark:text-white"
+                >
+                  আপনার মোবাইলে Edurlab ব্যবহার করুন
+                </p>
+              </div>
+
+              <!-- Play Store -->
+              <a
+                href="#"
+                class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
+              >
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
+                >
+                  <i class="fa-brands fa-google-play text-lg"></i>
+                </div>
+
+                <div>
+                  <p
+                    class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
+                  >
+                    GET IT ON
+                  </p>
+
+                  <p class="text-sm font-bold text-slate-800 dark:text-white">
+                    Google Play
+                  </p>
+                </div>
+
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
+                ></i>
+              </a>
+
+              <!-- App Store -->
+              <a
+                href="#"
+                class="flex items-center gap-3 rounded-xl px-3 py-3 transition-all hover:bg-emerald-50 dark:hover:bg-[#00BA74]/10"
+              >
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-[#034333] dark:text-white"
+                >
+                  <i class="fa-brands fa-apple text-xl"></i>
+                </div>
+
+                <div>
+                  <p
+                    class="text-[10px] font-medium text-slate-400 dark:text-gray-400"
+                  >
+                    DOWNLOAD ON THE
+                  </p>
+
+                  <p class="text-sm font-bold text-slate-800 dark:text-white">
+                    App Store
+                  </p>
+                </div>
+
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"
+                ></i>
+              </a>
+            </div>
+          </div>
         </nav>
 
-        <!-- Desktop Actions -->
-        <div class="hidden items-center gap-4 lg:flex">
+        <!-- ================= DESKTOP ACTIONS ================= -->
+        <div class="hidden items-center gap-3 lg:flex">
           <!-- Language -->
           <div
             class="flex items-center rounded-full border border-slate-200 bg-slate-100 p-1 text-xs font-semibold dark:border-[#135443] dark:bg-[#034333]"
           >
             <button
-              class="rounded-full bg-[#00BA74] px-3 py-1 text-white shadow-sm"
+              class="rounded-full bg-[#00BA74] px-3 py-1.5 text-white shadow-sm"
             >
               বাংলা
             </button>
 
             <button
-              class="px-3 py-1 text-slate-600 transition hover:text-[#00BA74] dark:text-gray-300"
+              class="px-3 py-1.5 text-slate-600 transition hover:text-[#00BA74] dark:text-gray-300"
             >
               EN
             </button>
@@ -554,22 +641,30 @@
             id="themeToggle"
             type="button"
             aria-label="Toggle theme"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 shadow-sm transition-all hover:scale-110 dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700 shadow-sm transition-all hover:scale-110 hover:border-[#00BA74] dark:border-[#135443] dark:bg-[#034333] dark:text-amber-400"
           >
             <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
           </button>
 
-          <!-- Demo -->
+          <!-- Login -->
           <a
-            href="#demo"
-            class="shimmer-btn flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#00BA74]/30 transition-all hover:scale-105"
+            href="#login"
+            class="rounded-full border border-[#00BA74] px-5 py-2.5 text-sm font-bold text-[#00BA74] transition-all duration-300 hover:bg-[#00BA74] hover:text-white hover:shadow-lg hover:shadow-[#00BA74]/20"
           >
-            <span>ডেমো দেখুন</span>
+            লগইন
+          </a>
+
+          <!-- Registration -->
+          <a
+            href="#registration"
+            class="flex items-center gap-2 rounded-full bg-[#00BA74] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#009c62] hover:shadow-xl"
+          >
+            রেজিস্ট্রেশন
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
 
-        <!-- Mobile Menu Button -->
+        <!-- ================= MOBILE MENU BUTTON ================= -->
         <button
           id="mobileMenuBtn"
           type="button"
@@ -587,14 +682,7 @@
         class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-4 shadow-xl dark:border-[#135443] dark:bg-[#01281E] lg:hidden"
       >
         <!-- Mobile Navigation -->
-        <nav
-          class="flex flex-col gap-1 font-sans"
-          style="
-            font-family:
-              &quot;Noto Sans Bengali&quot;, &quot;Hind Siliguri&quot;,
-              sans-serif;
-          "
-        >
+        <nav class="flex flex-col gap-1 font-sans">
           <a
             href="#home"
             class="mobile-nav-link flex items-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-[#00BA74] dark:bg-[#00BA74]/10 dark:text-emerald-400"
@@ -642,12 +730,74 @@
             <i class="fa-solid fa-circle-question mr-3 w-5"></i>
             <span>প্রশ্নোত্তর</span>
           </a>
+
+          <!-- Mobile App Download -->
+          <div
+            class="mt-1 rounded-xl border border-slate-200 dark:border-[#135443]"
+          >
+            <button
+              id="mobileAppBtn"
+              type="button"
+              class="flex w-full items-center rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-50 hover:text-[#00BA74] dark:text-white dark:hover:bg-[#00BA74]/10"
+            >
+              <i class="fa-solid fa-mobile-screen-button mr-3 w-5"></i>
+
+              <span>অ্যাপ ডাউনলোড</span>
+
+              <i
+                id="mobileAppIcon"
+                class="fa-solid fa-chevron-down ml-auto text-xs transition-transform duration-300"
+              ></i>
+            </button>
+
+            <!-- Mobile App Links -->
+            <div id="mobileAppMenu" class="hidden px-3 pb-3">
+              <!-- Play Store -->
+              <a
+                href="#"
+                class="mt-1 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
+              >
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
+                >
+                  <i class="fa-brands fa-google-play"></i>
+                </div>
+
+                <div>
+                  <p class="text-[9px] text-slate-400">GET IT ON</p>
+                  <p class="text-xs font-bold text-slate-800 dark:text-white">
+                    Google Play
+                  </p>
+                </div>
+              </a>
+
+              <!-- App Store -->
+              <a
+                href="#"
+                class="mt-2 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3 dark:bg-[#034333]"
+              >
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-slate-800 shadow-sm dark:bg-[#01281E] dark:text-white"
+                >
+                  <i class="fa-brands fa-apple text-lg"></i>
+                </div>
+
+                <div>
+                  <p class="text-[9px] text-slate-400">DOWNLOAD ON THE</p>
+                  <p class="text-xs font-bold text-slate-800 dark:text-white">
+                    App Store
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
         </nav>
 
         <!-- Mobile Controls -->
         <div
           class="mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 dark:border-[#135443]"
         >
+          <!-- Language + Theme -->
           <div class="flex items-center justify-between">
             <!-- Language -->
             <div
@@ -675,17 +825,28 @@
             </button>
           </div>
 
-          <!-- Mobile Demo -->
-          <a
-            href="#demo"
-            class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:scale-[1.02]"
-          >
-            <i class="fa-solid fa-eye"></i>
-            <span>ডেমো দেখুন</span>
-          </a>
+          <!-- Mobile Login + Registration -->
+          <div class="grid grid-cols-2 gap-3">
+            <a
+              href="#login"
+              class="flex items-center justify-center gap-2 rounded-xl border border-[#00BA74] px-4 py-3 text-sm font-bold text-[#00BA74] transition-all hover:bg-[#00BA74] hover:text-white"
+            >
+              <i class="fa-solid fa-right-to-bracket"></i>
+              লগইন
+            </a>
+
+            <a
+              href="#registration"
+              class="flex items-center justify-center gap-2 rounded-xl bg-[#00BA74] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-[#00BA74]/20 transition-all hover:bg-[#009c62]"
+            >
+              <i class="fa-solid fa-user-plus"></i>
+              রেজিস্ট্রেশন
+            </a>
+          </div>
         </div>
       </div>
     </header>
+
     <!-- HERO SECTION -->
     <section
       id="home"
@@ -3219,6 +3380,17 @@
 
     <!-- JS Logics -->
     <script>
+      const mobileAppBtn = document.getElementById("mobileAppBtn");
+      const mobileAppMenu = document.getElementById("mobileAppMenu");
+      const mobileAppIcon = document.getElementById("mobileAppIcon");
+
+      mobileAppBtn?.addEventListener("click", () => {
+        mobileAppMenu.classList.toggle("hidden");
+        mobileAppIcon.classList.toggle("rotate-180");
+      });
+
+      // End
+
       const slides = document.querySelectorAll(".school-slide");
       const dots = document.querySelectorAll(".slider-dot");
 
