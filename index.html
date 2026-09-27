@@ -1136,17 +1136,243 @@
 
     </div>
 
-    <!-- ================= CONTROLS ================= -->
-    <div
-      class="mt-3 flex items-center justify-center gap-[18px] sm:mt-9"
-    >
-      <button
-        id="heroPrev"
-        aria-label="Previous"
-        class="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#00BA74] hover:bg-[#00BA74] hover:text-white dark:border-emerald-500/20 dark:bg-white/5 dark:text-white"
-      >
-        <i class="fa-solid fa-arrow-left"></i>
-      </button>
+                <div
+                  class="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-3 text-[11px] font-bold text-slate-500 sm:text-[13px] lg:justify-start"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-check text-[#00BA74]"></i>
+                    দ্রুত ফলাফল
+                  </span>
+
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-file-pdf text-[#00BA74]"></i>
+                    রিপোর্ট
+                  </span>
+
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-share-nodes text-[#00BA74]"></i>
+                    সহজে শেয়ার
+                  </span>
+                </div>
+              </div>
+
+              <!-- RESULT IMAGE -->
+              <div
+                class="relative flex min-h-[350px] items-center justify-center lg:min-h-[480px]"
+              >
+                <div
+                  class="relative w-full max-w-[570px] overflow-hidden rounded-[28px] border-[6px] border-slate-200/80 bg-white shadow-[0_35px_90px_rgba(0,0,0,0.15)] dark:border-[#09291f] dark:bg-[#071712]"
+                >
+                  <img
+                    src="/assets/result.jpg"
+                    alt="Student Result"
+                    class="block h-[260px] w-full rounded-xl object-contain bg-slate-100 sm:h-[400px] dark:bg-slate-900"
+                  />
+
+                  <!-- Result Floating Card -->
+                  <div
+                    class="animate-[float_4s_ease-in-out_infinite] absolute bottom-5 left-5 flex items-center gap-3 rounded-[18px] border border-slate-200/80 bg-white/90 px-4 py-3 shadow-[0_20px_45px_rgba(0,0,0,0.12)] backdrop-blur-md dark:border-emerald-500/15 dark:bg-[#071712]/90 dark:text-white"
+                  >
+                    <div
+                      class="flex h-11 w-11 items-center justify-center rounded-[13px] bg-emerald-500/10 text-[#00BA74]"
+                    >
+                      <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <div>
+                      <small class="block text-[10px] text-slate-500">
+                        ফলাফল প্রকাশিত
+                      </small>
+
+                      <strong class="block text-[17px] font-black">
+                        GPA 5.00
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================================= -->
+          <!-- SLIDE 3 -->
+          <!-- ================================================= -->
+
+          <div
+            class="school-slide absolute inset-0 w-full opacity-0 invisible translate-x-12 scale-[0.985] transition-all duration-700 ease-out"
+          >
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+              <!-- TEXT -->
+              <div
+                class="mx-auto max-w-[650px] text-center lg:mx-0 lg:text-left"
+              >
+                <span
+                  class="inline-flex items-center justify-center gap-2.5 rounded-full border border-emerald-500/20 bg-emerald-50/80 px-4 py-2 text-[13px] font-bold text-emerald-700 backdrop-blur-md dark:bg-emerald-900/35 dark:text-emerald-300"
+                >
+                  <span
+                    class="h-2.5 w-2.5 animate-pulse rounded-full bg-[#00BA74]"
+                  ></span>
+
+                  স্মার্ট উপস্থিতি
+                </span>
+
+                <h2
+                  class="mt-6 text-[2.45rem] font-black leading-[1.12] tracking-[-0.04em] text-slate-900 sm:text-5xl lg:text-[4.5rem] dark:text-white"
+                >
+                  ID Card দিয়ে
+
+                  <span
+                    class="bg-gradient-to-r from-[#00BA74] via-emerald-500 to-teal-500 bg-clip-text text-transparent"
+                  >
+                    উপস্থিতি নিন
+                  </span>
+
+                  কয়েক সেকেন্ডেই!
+                </h2>
+
+                <p
+                  class="mx-auto mt-6 max-w-[600px] text-[15px] leading-[1.8] text-slate-500 sm:text-[17px] sm:leading-[1.9] lg:mx-0 dark:text-slate-300"
+                >
+                  শিক্ষার্থী ID Card ব্যবহার করে K40 attendance machine-এ punch
+                  করলেই উপস্থিতির তথ্য স্বয়ংক্রিয়ভাবে আপনার management system-এ
+                  সংরক্ষিত হবে।
+                </p>
+
+                <div
+                  class="mt-8 flex flex-col items-stretch justify-center gap-3.5 sm:flex-row sm:items-center lg:justify-start"
+                >
+                  <a
+                    href="#attendance"
+                    class="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#00BA74] px-6 py-3.5 text-[15px] font-bold text-white shadow-[0_15px_35px_rgba(0,186,116,0.25)] transition-all duration-300 hover:-translate-y-1"
+                  >
+                    উপস্থিতি দেখুন
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+
+                  <a
+                    href="#features"
+                    class="inline-flex items-center justify-center gap-2.5 rounded-full border border-slate-200 bg-white/70 px-6 py-3.5 text-[15px] font-bold text-slate-900 backdrop-blur-md dark:border-emerald-500/20 dark:bg-white/5 dark:text-white"
+                  >
+                    আরও জানুন
+                  </a>
+                </div>
+
+                <div
+                  class="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-3 text-[11px] font-bold text-slate-500 sm:text-[13px] lg:justify-start"
+                >
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-id-card text-[#00BA74]"></i>
+                    ID Card
+                  </span>
+
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-bolt text-[#00BA74]"></i>
+                    দ্রুত Punch
+                  </span>
+
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-cloud text-[#00BA74]"></i>
+                    Digital Record
+                  </span>
+                </div>
+              </div>
+
+              <!-- K40 VISUAL -->
+              <div
+                class="relative flex min-h-[350px] items-center justify-center lg:min-h-[480px]"
+              >
+                <div
+                  class="relative flex min-h-[350px] w-full max-w-[570px] items-center justify-center overflow-hidden rounded-[30px] border border-emerald-500/15 bg-gradient-to-br from-emerald-500/10 to-slate-900/5 shadow-[0_35px_90px_rgba(0,0,0,0.12)] sm:min-h-[480px]"
+                >
+                  <!-- Student Background -->
+                  <img
+                    src="/assets/student.jpg"
+                    alt="Student using RFID attendance card"
+                    class="absolute inset-0 h-full w-full object-cover opacity-25 saturate-75"
+                  />
+
+                  <!-- K40 -->
+                  <div
+                    class="relative z-10 w-[180px] rounded-[25px] bg-white/95 p-3 shadow-[0_30px_70px_rgba(0,0,0,0.25)] animate-[machineFloat_5s_ease-in-out_infinite] sm:w-[250px] sm:p-5"
+                  >
+                    <img
+                      src="/assets/student.jpg"
+                      alt="ZKTeco K40 Attendance Machine"
+                      class="h-[160px] w-full object-contain sm:h-[220px]"
+                    />
+
+                    <div
+                      class="mt-2 flex items-center justify-center gap-1.5 text-[10px] font-extrabold text-emerald-700 sm:text-xs"
+                    >
+                      <i class="fa-solid fa-wifi"></i>
+
+                      K40 Attendance
+                    </div>
+                  </div>
+
+                  <!-- ID Card -->
+                  <div
+                    class="absolute bottom-9 left-2.5 z-20 flex w-[180px] items-center gap-3 rounded-[18px] bg-gradient-to-br from-[#00BA74] to-emerald-600 p-3.5 text-white shadow-[0_20px_45px_rgba(0,0,0,0.25)] animate-[cardPunch_4s_ease-in-out_infinite] sm:bottom-16 sm:left-6 sm:w-[220px] sm:p-4"
+                  >
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 sm:h-[42px] sm:w-[42px]"
+                    >
+                      <i class="fa-solid fa-school"></i>
+                    </div>
+
+                    <div>
+                      <small class="block text-[8px] opacity-75">
+                        STUDENT ID
+                      </small>
+
+                      <strong class="block text-sm sm:text-[15px]">
+                        MD-10254
+                      </strong>
+                    </div>
+
+                    <i class="fa-solid fa-wifi ml-auto rotate-90 text-lg"></i>
+                  </div>
+
+                  <!-- Punch Status -->
+                  <div
+                    class="absolute right-2.5 top-4 z-30 flex scale-90 items-center gap-2.5 rounded-[17px] bg-white/95 px-3.5 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.15)] animate-[float_4s_ease-in-out_infinite] sm:right-6 sm:top-9 sm:scale-100"
+                  >
+                    <span
+                      class="flex h-9 w-9 items-center justify-center rounded-full bg-green-100 text-green-600"
+                    >
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <div>
+                      <small class="block text-[9px] text-slate-500">
+                        উপস্থিতি সম্পন্ন
+                      </small>
+
+                      <strong class="block text-[13px] text-slate-900">
+                        সকাল ৮:০২
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- CONTROLS -->
+        <!-- ================================================= -->
+
+        <div class="mt-9 flex items-center justify-center gap-[18px]">
+          <!-- Previous -->
+          <button
+            id="heroPrev"
+            aria-label="Previous"
+            class="flex h-[42px] w-[42px] items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#00BA74] hover:bg-[#00BA74] hover:text-white dark:border-emerald-500/20 dark:bg-white/5 dark:text-white"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
 
       <div class="flex items-center gap-2">
         <button
