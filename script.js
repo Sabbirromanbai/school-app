@@ -1,4 +1,4 @@
-
+ 
       // ================= LANGUAGE SWITCHER =================
 
 const languageButtons = document.querySelectorAll(".lang-btn");
